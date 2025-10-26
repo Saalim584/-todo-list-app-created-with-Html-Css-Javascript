@@ -1,0 +1,235 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* Container Styles */
+.container-todo {
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+/* Header Styles */
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Group Styles */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 500px;
+    font-size: 1rem;
+}
+
+#todo-input {
+
+    opacity: 0.9px;
+    flex: 1;
+    height: 45px;
+    padding: 0px 0.30rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .input-group {
+        height: 100px;
+        font-size: 1rem;
+        /* padding: 20px; */
+    }
+}
+
+#todo-input:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+    outline: none;
+}
+
+#todo-input:hover {
+    border-color: #6c5ce7;
+}
+
+#add-btn {
+    height: 40px;
+    padding: 0px 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background: #7466da;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(108, 92, 231, 0.2);
+}
+
+#add-btn:hover {
+    background: #5b4cc4;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(108, 92, 231, 0.3);
+}
+
+#add-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(108, 92, 231, 0.2);
+}
+
+/* Todo List Styles */
+#todo-list {
+    width: 100%;
+    max-width: 500px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Todo Item Styles */
+li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: white;
+    border: 1px solid #e4dddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkbox Styles */
+li input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #6c5ce7;
+    transition: all 0.2s ease;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+
+li input[type="checkbox"]:checked {
+    background-color: #6c5ce7;
+    border-color: #6c5ce7;
+}
+
+/* Todo Text Styles */
+li span {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #a0a0a0;
+    opacity: 0.7;
+}
+
+/* Delete Button Styles */
+li button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    color: white;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+
+}
+
+li button:hover {
+    background: #ff5252;
+    transform: scale(1.05);
+}
+
+li button:active {
+    transform: scale(1);
+}
+
+/* Responsive Design */
+@media (max-width: 780px) {
+    .container-todo {
+        width: 95%;
+        /* height: 30px; */
+        padding: 1.5rem;
+        margin: 1rem auto;
+
+    }
+
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    #todo-input,
+    #add-btn {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 600;
+
+    }
+
+
+}
+
+/* text-decoration: line-through; */
+p {
+    color: gray;
+    opacity: 0.6;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
